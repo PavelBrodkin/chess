@@ -1,0 +1,59 @@
+.board {
+  width: 640px;
+  border: 10px solid #808ba0;
+
+  & .row {
+    height: 80px;
+    display: flex;
+  }
+
+  & .cell {
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  & .black_icon {
+    fill: #000;
+  }
+
+  & .white_icon {
+    fill: #fffbdd;
+  }
+
+  & .piece {
+    background: transparent;
+  }
+
+  & .yellow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background-color: yellow;
+  }
+
+  & .red {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background-color: red;
+  }
+
+  & .green {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background-color: green;
+  }
+}
