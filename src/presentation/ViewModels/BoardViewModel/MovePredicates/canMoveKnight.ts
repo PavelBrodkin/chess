@@ -1,7 +1,12 @@
-import { POINT_LETTERS } from '../../constans';
-import { KNIGHT_MAX_MOVE_CELL_COUNT } from './constans';
+import { POINT_LETTERS } from '../../constants';
+import { KNIGHT_MAX_MOVE_CELL_COUNT } from './constants';
 
-export const canMoveKnight = (fromCell: string, toCell: string): boolean => {
+interface IParams {
+  fromCell: string;
+  toCell: string;
+}
+
+export const canMoveKnight = ({ toCell, fromCell }: IParams): boolean => {
   const [pointLetter, pointNumber] = fromCell.split('');
 
   const index = POINT_LETTERS.indexOf(pointLetter);

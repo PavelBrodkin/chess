@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { observer } from 'mobx-react-lite';
-import { IChessBoardProps } from './interfaces';
-import Row from './Row';
+import { IChessBoardProps } from '../interfaces';
+import Row from '../Row/Row';
 import './Board.scss';
 
 const Board: FC<IChessBoardProps> = ({ cellsMatrix, positions, movePiece }) => {

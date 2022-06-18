@@ -1,7 +1,7 @@
 import { inject, injectable } from 'tsyringe';
 import DATA_SOURCE from '../../../bootstrap/configs/di/dataSource';
 import type { IPlayerModel } from '../../../domain/entity/Player/model/interfaces';
-import { WHITE_PLAYER_INITIAL_PIECE_PLACEMENT } from '../constans';
+import { WHITE_PLAYER_INITIAL_PIECE_PLACEMENT } from '../constants';
 import { AbstractPlayerViewModel } from './AbstractPlayerViewModel';
 import type { IPlayerViewModel } from './interfaces';
 

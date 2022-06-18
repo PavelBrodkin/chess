@@ -3,7 +3,7 @@ import VIEW_MODEL from '../../bootstrap/configs/di/viewModel';
 import { IBoardViewModel } from '../ViewModels/BoardViewModel/interfaces';
 import useViewModel from '../hooks/useViewModel';
 import { observer } from 'mobx-react-lite';
-import ChessBoard from './modules/Board/components/Board';
+import ChessBoard from './modules/Board/components/Board/Board';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import { DndProvider } from 'react-dnd';
 import './App.scss';

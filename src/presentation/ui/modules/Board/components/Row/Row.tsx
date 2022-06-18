@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 import { observer } from 'mobx-react-lite';
-import { IChessBoardRowProps } from './interfaces';
-import { getCellsColorByRow } from '../../../../ViewModels/helpers';
-import Cell from './Cell';
+import { IChessBoardRowProps } from '../interfaces';
+import { getCellsColorByRow } from '../../../../../ViewModels/helpers';
+import Cell from '../Cell/Cell';
 
 const Row: FC<IChessBoardRowProps> = ({
   row,

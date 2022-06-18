@@ -1,5 +1,5 @@
 import { inject, injectable } from 'tsyringe';
-import { action, computed, makeObservable, observable } from 'mobx';
+import { action, computed, makeObservable, observable, toJS } from 'mobx';
 import DATA_SOURCE from '../../../bootstrap/configs/di/dataSource';
 import USE_CASE from '../../../bootstrap/configs/di/usecase';
 import { IBoardViewModel } from './interfaces';
@@ -35,10 +35,8 @@ export class BoardViewModel implements IBoardViewModel {
     this.model.setPositions(placementDictionary);
   }
 
-  //Todo разобраться чтобы работало через mergeBoard, а не просто через юзкейс
   movePiece(fromCell: string, toCell: string): void {
     this.movePieceUseCase.execute(this.model.item, fromCell, toCell);
-    // this.model.mergeBoard(updatedBoard.item);
   }
 
   private _cellsMatrix: Array<string[]> = [];

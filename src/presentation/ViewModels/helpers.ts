@@ -6,7 +6,7 @@ import {
   MAX_CELLS_COUNT,
   POINT_LETTERS,
   WHITE_PLAYER_INITIAL_PIECE_PLACEMENT
-} from './constans';
+} from './constants';
 
 export const calculateCellsMatrix = (): Array<string[]> =>
   POINT_LETTERS.reduce((acc, _, i) => {
