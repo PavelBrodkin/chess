@@ -47,7 +47,6 @@ const Cell: FC<IChessBoardCellProps> = ({
 
   return (
     <div ref={drop} style={{ background }} className='cell'>
-      {cell}
       <Piece cell={cell}>
         <PieceIcon player={player} piece={piece} />
       </Piece>

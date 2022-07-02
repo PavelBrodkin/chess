@@ -11,5 +11,8 @@ export const PAWN_MAX_INITIAL_CELL_COUNT = 2;
 export const WHITE_PAWN_INITIAL_CELL_POINT_NUMBER = 2;
 export const BLACK_PAWN_INITIAL_CELL_POINT_NUMBER = 7;
 
-//Bishop constants;
+// King  constants
+export const KING_MAX_MOVE_CELL_COUNT = 1;
+
+// Bishop constants;
 export const BISHOP_MAX_MOVE_CELL_COUNT = 1;

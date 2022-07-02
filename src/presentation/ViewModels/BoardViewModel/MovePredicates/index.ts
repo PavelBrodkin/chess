@@ -1,20 +1,21 @@
-import { EPieceName, EPlayerName } from '../../../ui/modules/Board';
-import { IPositionInfo } from '../../../../domain/entity/Board/structures/interfaces';
-import { canMoveKnight } from './canMoveKnight';
-import { canMovePawn } from './canMovePawn';
-import { canMoveBishop } from './canMoveBishop';
+import { IMovePiecePredicateParams } from './interfaces';
+import { EPieceName } from '../../../ui/modules/Board';
+import { canMoveKnight } from './Pieces/canMoveKnight';
+import { canMovePawn } from './Pieces/canMovePawn';
+import { canMoveBishop } from './Pieces/canMoveBishop';
+import { canMoveRook } from './Pieces/canMoveRook';
+import { canMoveQueen } from './Pieces/canMoveQueen';
+import { canMoveKing } from './Pieces/canMoveKing';
 
-interface IParams {
-  positions: Record<string, IPositionInfo>;
-  player: EPlayerName;
-  piece: EPieceName;
-  fromCell: string;
-  toCell: string;
-}
+// Todo может вынести в отдельный ВМ все как то, подумать
 
-export const canMovePiece = (params: IParams): boolean => {
-  const { fromCell, toCell, piece, player, positions } = params;
-
+export const canMovePiece = ({
+  fromCell,
+  toCell,
+  piece,
+  player,
+  positions
+}: IMovePiecePredicateParams): boolean => {
   if (positions[toCell].player === player) {
     return false;
   }
@@ -27,15 +28,15 @@ export const canMovePiece = (params: IParams): boolean => {
       return canMovePawn({ fromCell, toCell, player });
 
     case EPieceName.BISHOP:
-      return canMoveBishop({ fromCell, toCell, positions });
+      return canMoveBishop({ fromCell, toCell, positions, player });
 
     case EPieceName.ROOK:
-      return false;
+      return canMoveRook({ fromCell, toCell, positions, player });
 
     case EPieceName.QUEEN:
-      return false;
+      return canMoveQueen({ fromCell, toCell, positions, player });
 
     case EPieceName.KING:
-      return false;
+      return canMoveKing({ fromCell, toCell });
   }
 };

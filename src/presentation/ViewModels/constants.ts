@@ -1,4 +1,5 @@
 export const POINT_LETTERS = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
+export const POINT_NUMBERS = [1, 2, 3, 4, 5, 6, 7, 8];
 
 export const MAX_CELLS_COUNT = 8;
 
